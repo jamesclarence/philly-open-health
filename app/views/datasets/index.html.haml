@@ -4,14 +4,14 @@
   %tr
     %th Title
     %th Description
-    %th Createdate
+    %th Create Date
     %th
     %th
     %th
 
   - @datasets.each do |dataset|
     %tr
-      %td= dataset.title
+      %td= link_to dataset.title, dataset
       %td= dataset.description
       %td= dataset.createdate
       %td= link_to 'Show', dataset, class: "btn btn-default"

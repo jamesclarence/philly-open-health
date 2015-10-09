@@ -9,6 +9,7 @@
     = csrf_meta_tags
 
   %body
+    
     %nav.navbar.navbar-default
       .container-fluid
         .navbar-header
@@ -34,4 +35,6 @@
     - flash.each do |name, msg|
       = content_tag :div, msg, id: "flash-#{name}"          
 
+    <div class="container">
     = yield
+    </div>
